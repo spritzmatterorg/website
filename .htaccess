@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^spritzmatter.com$
+RewriteRule ^$ https://spritzmatter.com/it/index.html [L,R=301]
+RewriteCond %{HTTP_HOST} ^www.spritzmatter.com$
+RewriteRule ^$ https://www.spritzmatter.com/it/index.html [L,R=301]
+Redirect 301 /catalog /assets/docs/SpritzMatter_Catalog.pdf
+# php -- BEGIN cPanel-generated handler, do not edit
+# This domain inherits the “PHP” package.
+# php -- END cPanel-generated handler, do not edit

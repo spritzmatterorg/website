@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^spritzmatter.com$
+RewriteRule ^$ http://spritzmatter.com/it/index.html [L,R=301]
