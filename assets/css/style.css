@@ -40,7 +40,8 @@
     23. Login Register CSS
     24. Footer CSS
     24.1. Footer Widget CSS
-	
+    25 Partner CSS
+
 
 -----------------------------------------------------------------------------------*/
 /*----------------------------------------*/
@@ -294,7 +295,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .section-title .sub-title {
   font-size: 14px;
   line-height: 30px;
-  font-family: "Jost", sans-serif;
   font-weight: 500;
   color: #bd2e03;
   letter-spacing: 1px;
@@ -838,15 +838,31 @@ textarea:-ms-input-placeholder {
   left: 0;
   top: 110%;
   width: 270px;
-  background: #ffffff;
-  box-shadow: 0 2px 29px rgba(0, 0, 0, 0.05);
-  padding: 20px 0;
-  border-radius: 5px;
+  background: linear-gradient(135deg, #151515 0%, #1a1a1a 100%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding: 15px 0;
+  border-radius: 8px;
   border-top: 3px solid #bd2e03;
+  border-left: 1px solid rgba(189, 46, 3, 0.2);
+  border-right: 1px solid rgba(189, 46, 3, 0.2);
+  border-bottom: 1px solid rgba(189, 46, 3, 0.2);
   opacity: 0;
   z-index: 99;
   visibility: hidden;
   transition: all 0.3s linear;
+}
+
+/* Add arrow pointer to submenu */
+.header-menu .main-menu li .sub-menu::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #bd2e03;
 }
 
 .header-menu .main-menu li .sub-menu li {
@@ -854,7 +870,7 @@ textarea:-ms-input-placeholder {
 }
 
 .header-menu .main-menu li .sub-menu li a {
-  padding: 5px 25px;
+  padding: 12px 25px;
   font-size: 15px;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
@@ -862,10 +878,21 @@ textarea:-ms-input-placeholder {
   display: block;
   position: relative;
   z-index: 1;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+  margin: 0 8px;
+}
+
+.header-menu .main-menu li .sub-menu li a:hover {
+  background: rgba(189, 46, 3, 0.1);
+  color: #bd2e03;
+  transform: translateX(5px);
 }
 
 .header-menu .main-menu li .sub-menu li.active > a {
   color: #bd2e03;
+  background: rgba(189, 46, 3, 0.15);
 }
 
 .header-menu .main-menu li .sub-menu li:hover > a {
@@ -1841,7 +1868,13 @@ textarea:-ms-input-placeholder {
   }
 
   .btn-4{
-    display: none;
+    height: 50px;
+  line-height: 48px;
+  font-size: 18px;
+  padding: 0 45px;
+  background: #bd2e03;
+  box-shadow: 11px 10px 38px 0 rgba(46, 63, 99, 0.15);
+  color: #ffffff;
   }
 
   .features-icon{
@@ -1886,26 +1919,32 @@ textarea:-ms-input-placeholder {
   padding: 30px 0;
 }
 
+.offcanvas-submenu {
+  padding: 30px 0;
+}
+
 .offcanvas-menu .main-menu li {
   position: relative;
+  align-items: center;
 }
 
 .offcanvas-menu .main-menu li a {
   display: block;
+  flex: 1;
   font-size: 16px;
   font-weight: 600;
   font-family: "Barlow", sans-serif;
   color: #ffffff;
-  padding: 5px 0px;
+  padding: 10px 0px;
   position: relative;
 }
 
 .offcanvas-menu .main-menu li .menu-expand {
   position: absolute;
-  right: 20px;
-  top: 14px;
-  width: 30px;
-  height: 30px;
+  left: 90px;
+  top: 12px;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
@@ -2262,6 +2301,10 @@ textarea:-ms-input-placeholder {
 }
 
 @media only screen and (max-width: 767px) {
+  .techwix-hero-section-06 .hero-images .images img {
+    max-width: 230px;
+    height: auto;
+  }
   .techwix-hero-section-02 {
     padding-top: 150px;
   }
@@ -2754,7 +2797,7 @@ textarea:-ms-input-placeholder {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding-top: 50px;
+  padding-top: 0px;
 }
 
 .techwix-hero-section-06 .hero-images {
@@ -2772,8 +2815,11 @@ textarea:-ms-input-placeholder {
   z-index: -1;
 }
 
+/*Can be used to set the background image on the main page*/
+
 .techwix-hero-section-06 .hero-content {
-  padding-top: 170px;
+  padding-top: 190px;
+  padding-bottom: 80px;
 }
 
 .techwix-hero-section-06 .hero-content .sub-title {
@@ -2791,6 +2837,7 @@ textarea:-ms-input-placeholder {
   font-weight: 600;
   color: #ffffff;
   margin-top: 10px;
+  text-align: justify;
 }
 
 .techwix-hero-section-06 .hero-content .title span {
@@ -2802,6 +2849,8 @@ textarea:-ms-input-placeholder {
   line-height: 36px;
   color: #ffffff;
   margin-top: 40px;
+  text-align: justify;
+  line-height: 1.6;
 }
 
 .techwix-hero-section-06 .hero-content .hero-btn .btn-4 {
@@ -2888,6 +2937,15 @@ textarea:-ms-input-placeholder {
   .techwix-hero-section-06 .hero-content .title {
     font-size: 32px;
     line-height: 42px;
+  }
+  .techwix-hero-section-06 .hero-content .title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .techwix-hero-section-06 .hero-content p {
+    font-size: 18px;
+    text-align: center;
+    line-height: 32px;
   }
 }
 
@@ -3922,7 +3980,7 @@ textarea:-ms-input-placeholder {
   position: relative;
   max-width: 360px;
 }
-/* 
+
 .techwix-cta-section-04 .cta-right::before {
   content: "";
   position: absolute;
@@ -3983,12 +4041,30 @@ textarea:-ms-input-placeholder {
   .techwix-cta-section-04 .cta-right::after {
     height: 240px;
   }
+  .techwix-cta-section-04 .contact-map-wrap{
+    width:0%;
+    height:0px;
+    min-height:300px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
+   .techwix-cta-section-04 .cta-left {
+    padding-right: 0px;
+  }
+  .techwix-cta-section-04 .cta-right {
+    margin-top: 65px;
+  }
+  .techwix-cta-section-04 .cta-right::before {
+    width: 320px;
+  }
+  .techwix-cta-section-04 .cta-right::after {
+    height: 240px;
+  }
   .techwix-cta-section-04 .cta-right .counter-item span {
     font-size: 42px;
   }
+  
 }
 
 .techwix-cta-section-05 .cta-wrap {
@@ -6438,9 +6514,7 @@ textarea:-ms-input-placeholder {
   width: 70%;
 }
 
-.contact-map-section .contact-map-wrap {
-  margin-bottom: -8px;
-}
+
 
 .contact-map-section .contact-map-wrap iframe {
   height: 550px;
@@ -6623,6 +6697,31 @@ textarea:-ms-input-placeholder {
 /*--
 /*  03 - Choose Us CSS
 /*----------------------------------------*/
+
+/*
+* Choose Us Large blocks added for the new website
+*/
+.choose-us-large{
+  display: flex; 
+  flex-direction: column; 
+  gap: 40px;
+}
+
+.choose-us-large-block{
+  background: #f8f9fa; 
+  border-radius: 16px; 
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08); 
+  padding: 32px;
+}
+
+.choose-us-large-button{
+  background: none; 
+  border: none; 
+  font-size: 2em; 
+  cursor: pointer; 
+  color: #000000;
+}
+
 .techwix-choose-us-section {
   background: #f8f8f8;
   background-repeat: no-repeat;
@@ -7335,7 +7434,7 @@ textarea:-ms-input-placeholder {
 }
 
 .techwix-features-section-02 .features-wrap-02 {
-  margin-top: -140px;
+  margin-top: -100px;
   position: relative;
   z-index: 5;
 }
@@ -7397,7 +7496,7 @@ textarea:-ms-input-placeholder {
 
 @media only screen and (max-width: 1199px) {
   .techwix-features-section-02 .features-wrap-02 {
-    margin-top: -90px;
+    margin-top: -50px;
   }
   .techwix-features-section-02 .features-item {
     padding: 40px 25px;
@@ -9141,6 +9240,10 @@ textarea:-ms-input-placeholder {
   margin-top: 15px;
 }
 
+
+.copyright-text p::before {
+  content: "© Copyrights 2025 SpritzMatter All rights reserved.";
+}
 @media only screen and (max-width: 767px) {
   .copyright-text {
     text-align: center;
@@ -9180,14 +9283,16 @@ textarea:-ms-input-placeholder {
   height: 45px;
   width: 45px;
   cursor: pointer;
+  background-color: #ff5538;
   display: block;
   border-radius: 50px;
-  box-shadow: inset 0 0 0 2px rgba(0, 93, 224, 0.2);
+  box-shadow: inset 0 0 0 1.5px rgba(0, 0, 0, 1);
   opacity: 0;
   visibility: hidden;
   transform: translateX(130%);
   z-index: 99;
   transition: all 200ms linear;
+  font-weight: bold;
 }
 
 .progress-wrap::after {
@@ -9197,7 +9302,7 @@ textarea:-ms-input-placeholder {
   text-align: center;
   line-height: 45px;
   font-size: 18px;
-  color: #bd2e03;
+  color: #ffffff; /* colore icona */
   left: 0;
   top: 0;
   height: 46px;
@@ -9206,6 +9311,8 @@ textarea:-ms-input-placeholder {
   cursor: pointer;
   display: block;
   z-index: 1;
+  font-weight: bold;
+
 }
 
 .progress-wrap svg path {
@@ -9213,7 +9320,7 @@ textarea:-ms-input-placeholder {
 }
 
 .progress-wrap svg.progress-circle path {
-  stroke: #bd2e03;
+  stroke: #ff5538;
   stroke-width: 4;
   box-sizing: border-box;
 }
@@ -9225,7 +9332,7 @@ textarea:-ms-input-placeholder {
 }
 
 .progress-wrap-3 {
-  box-shadow: inset 0 0 0 2px rgba(255, 85, 56, 0.2);
+  box-shadow: inset 0 0 0 3px rgba(255, 85, 56, 0.2);
 }
 
 .progress-wrap-3::after {
@@ -9234,4 +9341,51 @@ textarea:-ms-input-placeholder {
 
 .progress-wrap-3 svg.progress-circle path {
   stroke: #ff5538;
+}
+
+
+/*----------------------------------------*/
+/*  26. Partner CSS
+/*----------------------------------------*/
+
+.partner{
+  padding: 40px 0; 
+  background: linear-gradient(135deg, #f8fafc 0%, #e9ecef 100%)
+}
+.partner-section {
+  width: 16.666%; 
+  min-width: 180px; 
+  margin-bottom: 24px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+.partner-square-bg {
+  width: 150px; 
+  height: 150px; 
+  background: linear-gradient(135deg, #fff 60%, #e3e6f0 100%); 
+  border-radius: 18px; 
+  box-shadow: 0 6px 24px rgba(67, 186, 255, 0.10), 0 1.5px 6px rgba(113, 65, 177, 0.08); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin-bottom: 18px; 
+  border: 1.5px solid #e0e7ef; 
+  transition: box-shadow 0.3s;
+}
+
+.partner-logo{
+  max-width: 130px; 
+  max-height: 130px; 
+  object-fit: contain; 
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.08));
+}
+
+.partner-title {
+  font-size: 1.15em; 
+  text-align: center; 
+  font-weight: 500; 
+  color: #000000; 
+  letter-spacing: 0.5px;
 }
