@@ -1,0 +1,879 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>European Projects - Spritz Matter</title>
+    <meta name="robots" content="follow" />
+    <meta name="description" content="European projects in which Spritz Matter has participated">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/icon.ico">
+
+    <!-- CSS
+	============================================ -->
+
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="../assets/css/plugins/all.min.css">
+    <link rel="stylesheet" href="../assets/css/plugins/flaticon.css">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="../assets/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/plugins/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/plugins/aos.css">
+    <link rel="stylesheet" href="../assets/css/plugins/magnific-popup.css">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .project-icon-wrapper {
+            text-align: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            min-height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-icon {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            max-height: 140px;
+            object-fit: contain;
+            object-position: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .project-icon-wrapper a:hover .project-icon {
+            transform: scale(1.05);
+            opacity: 0.85;
+        }
+
+        .project-title a {
+            transition: color 0.3s ease;
+        }
+
+        .project-title a:hover {
+            color: #d94426 !important;
+            text-decoration: none !important;
+        }
+
+        .project-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            color: #ff5538;
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .project-description {
+            color: #555;
+            line-height: 1.8;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: #ff5538;
+            color: #fff;
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            margin-right: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .project-status.ongoing {
+            background: #28a745;
+            color: #fff;
+        }
+
+        .project-status.completed {
+            background: #6c757d;
+            color: #fff;
+        }
+
+        .project-status-icon {
+            font-size: 0.9em;
+        }
+
+        .project-tags-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .project-partners {
+            margin-top: auto;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .project-partners h5 {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 60px;
+        }
+
+        .partner-logos img {
+            height: 50px;
+            max-width: 140px;
+            width: auto;
+            object-fit: contain;
+            opacity: 0.75;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+            filter: grayscale(20%);
+        }
+
+        .partner-logos img:hover {
+            opacity: 1;
+            transform: scale(1.08);
+            filter: grayscale(0%);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 991px) {
+            .project-card {
+                padding: 25px;
+                margin-bottom: 25px;
+            }
+            
+            .project-title {
+                font-size: 1.4em;
+            }
+
+            .project-icon-wrapper {
+                min-height: 140px;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .project-card {
+                margin-bottom: 20px;
+            }
+
+            .project-icon-wrapper {
+                min-height: 120px;
+                padding: 15px;
+            }
+
+            .project-icon {
+                max-width: 240px;
+                max-height: 110px;
+            }
+
+            .project-card {
+                padding: 20px;
+            }
+
+            .project-title {
+                font-size: 1.3em;
+            }
+
+            .partner-logos {
+                gap: 15px;
+                justify-content: center;
+            }
+
+            .partner-logos img {
+                height: 45px;
+                max-width: 110px;
+            }
+        }
+
+        @media (max-width: 575px) {
+            .project-card {
+                margin-bottom: 20px;
+            }
+
+            .project-icon-wrapper {
+                padding: 12px;
+                min-height: 100px;
+            }
+
+            .project-icon {
+                max-width: 200px;
+                max-height: 90px;
+            }
+
+            .project-description {
+                font-size: 0.95em;
+            }
+
+            .partner-logos img {
+                height: 40px;
+                max-width: 95px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+
+        <!-- Preloader start -->
+        <div id="preloader">
+            <div class="preloader">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <!-- Preloader End -->
+
+        <!-- Header Start  -->
+        <div id="header" class="section header-section header-section-06">
+
+            <div class="container">
+
+                <!-- Header Wrap Start  -->
+                <div class="header-wrap">
+
+                    <div class="header-logo">
+                        <a href="index.html"><img src="../assets/images/logo_scriptbianco-21.webp" alt=""></a>
+                    </div>
+
+                    <div class="header-menu d-none d-lg-block">
+                        <ul class="main-menu">
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                                <ul class="sub-menu">
+                                    <li><a href="team.html">Team</a></li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">Services</a>
+                                <ul class="sub-menu">
+                                    <li><a href="cybersecurity.html">Cybersecurity</a></li>
+                                    <li><a href="ai.html">Artificial Intelligence</a></li>
+                                    <li><a href="workshop.html">Workshops</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="active-menu">
+                                <a href="eu-projects.html">European Projects</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Header Meta Start -->
+                    <div class="header-meta">
+                        <div class="header-menu d-none d-lg-block">
+                            <ul class="main-menu">
+                                <li>
+                                    <a href="../it/eu-projects.html">ITA</a>
+                                </li>
+                                <li class="active-menu">
+                                    <a href="../en/eu-projects.html">ENG</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-btn d-none d-xl-block">
+                            <a class="btn btn-4" href="contact.html">Contact Us</a>
+                        </div>
+                        <!-- Header Toggle Start -->
+                        <div class="header-toggle d-lg-none">
+                            <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <!-- Header Toggle End -->
+                    </div>
+                    <!-- Header Meta End  -->
+
+                </div>
+                <!-- Header Wrap End  -->
+
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Offcanvas Start-->
+        <div class="offcanvas offcanvas-start" id="offcanvasExample">
+            <div class="offcanvas-header">
+                <!-- Offcanvas Logo Start -->
+                <div class="offcanvas-logo">
+                    <a href="index.html"><img src="../assets/images/logo_scriptbianco-21.webp" alt=""></a>
+                </div>
+                <!-- Offcanvas Logo End -->
+                <button type="button" class="close-btn" data-bs-dismiss="offcanvas"><i
+                        class="flaticon-close"></i></button>
+            </div>
+
+            <!-- Offcanvas Body Start -->
+            <div class="offcanvas-body">
+                <div class="offcanvas-menu">
+                    <ul class="main-menu">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                            <ul class="sub-menu">
+                                <li><a href="team.html">Team</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Services</a>
+                            <ul class="sub-menu">
+                                <li><a href="cybersecurity.html">Cybersecurity</a></li>
+                                <li><a href="ai.html">Artificial Intelligence</a></li>
+                                <li><a href="workshop.html">Workshops</a></li>
+                            </ul>
+                        </li>
+                        <li class="active-menu">
+                            <a href="eu-projects.html">European Projects</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact</a>
+                        </li>
+                        <li>--------</li>
+                        <li>
+                            <a href="../it/eu-projects.html">ITA</a>
+                        </li>
+                        <li class="active-menu">
+                            <a href="../en/eu-projects.html">ENG</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Offcanvas Body End -->
+        </div>
+        <!-- Offcanvas End -->
+
+
+        <!-- Page Banner Start -->
+        <div class="section page-banner-section"
+            style="background-image: url(../assets/images/bg/blackboard.jpg); padding-bottom: 50px;">
+
+            <div class="container">
+                <div class="page-banner-wrap">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Page Banner Content Start -->
+                            <div class="page-banner text-center">
+                                <h2 class="title">European Projects</h2>
+                                <p style="color: #fff; font-size: 1.1em; margin-top: 15px;">
+                                    Spritz Matter actively participates in research and innovation projects funded 
+                            by the European Union, contributing to the advancement of technologies in the fields of 
+                            cybersecurity, artificial intelligence, and post-quantum cryptography. 
+                            Our collaboration with academic institutions and European industrial partners 
+                            enables us to develop cutting-edge solutions and transfer research results 
+                            directly to our clients.
+                                </p>
+                                <ul class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">European Projects</li>
+                                </ul>
+                            </div>
+                            <!-- Page Banner Content End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Banner End -->
+
+        <!-- Projects Section Start -->
+        <div class="section section-padding" style="background-color: #f8f9fa;">
+            <div class="container">
+
+                <!-- Sezione Introduttiva -->
+                <div class="row mb-5">
+                    <div class="col-lg-12 text-center">
+                        <div class="section-title">
+                            <h3 class="sub-title color-3">Our Projects</h3>
+                            <h2 class="title">Innovation and Research at European Level</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progetti Grid -->
+                <div class="row" style="row-gap: 30px;">
+
+                    
+
+                    <!-- PROGETTO 1 - NGI TRUSTCHAIN -->
+                    <div class="col-lg-6 d-flex">
+                        <div class="project-card">
+                            <div class="project-icon-wrapper">
+                                <a href="https://trustchain.ngi.eu/" target="_blank" rel="noopener noreferrer" title="Visita il sito web del progetto NGI Trustchain">
+                                    <img src="../assets/images/progetti/NGI-trustchain.png.webp" alt="Logo Progetto NGI Trustchain"
+                                        class="project-icon" style="cursor: pointer;">
+                                </a>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags-wrapper">
+                                    <span class="project-tag">ID: 101093274</span>
+                                    <span class="project-status ongoing">
+                                        <i class="fas fa-circle project-status-icon"></i>
+                                        Ongoing
+                                    </span>
+                                </div>
+                                <h3 class="project-title">
+                                    <a href="https://trustchain.ngi.eu/equivor/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                                        EQUIVOR
+                                    </a>
+                                </h3>
+                                <p class="project-description">
+                                    <a href="https://trustchain.ngi.eu/equivor/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; font-weight: 700;">EQUIVOR</a> (Equivocation-Resistant Consensus for Distributed Ledger Technologies) introduces a lightweight, energy-efficient consensus protocol tailored for sharded blockchain ecosystems. To address the vulnerabilities inherent in scalable high-throughput networks, the project deploys the DERC (Dynamic Equivocation-Resistant Consensus) protocol. By fusing advanced state analysis, cryptographic voting mechanisms, and AI-driven probabilistic detection, EQUIVOR proactively secures the network against malicious behavior. Aligned with TrustChain’s vision, the solution delivers high reliability and scalability while reducing consensus-related energy consumption by up to 30% compared to legacy protocols.
+                                </p>
+                                <p class="project-description" style="margin-top: 10px;">
+                                    <strong>Period:</strong> 2025 - 2026<br>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROGETTO 2 - PQ-REACT -->
+                    <div class="col-lg-6 d-flex">
+                        <div class="project-card">
+                            <div class="project-icon-wrapper">
+                                <a href="https://pqreact.eu/" target="_blank" rel="noopener noreferrer" title="Visita il sito web del progetto PQ-REACT">
+                                    <img src="../assets/images/progetti/PQ-REACT_Logo_Horizontal-1024x439-2457328888.png" alt="Logo Progetto PQ-REACT"
+                                        class="project-icon" style="cursor: pointer;">
+                                </a>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags-wrapper">
+                                    <span class="project-tag">Horizon Europe</span>
+                                    <span class="project-tag">ID: 101119547</span>
+                                    <span class="project-status ongoing">
+                                        <i class="fas fa-circle project-status-icon"></i>
+                                        Ongoing
+                                    </span>
+                                </div>
+                                <h3 class="project-title">
+                                    <a href="https://pqreact.eu/meet-the-team-behind-quas/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                                        QUAS
+                                    </a>
+                                </h3>
+                                <p class="project-description">
+                                    <a href="https://pqreact.eu/meet-the-team-behind-quas/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; font-weight: 700;">QUAS</a> is a framework designed to future-proof modern communication standards against emerging quantum threats by embedding Post-Quantum Cryptography (PQC) into QUIC and SIP protocols. Addressing the vulnerabilities of legacy encryption, the project replaces traditional key exchanges and signatures with NIST-recommended quantum-safe alternatives, such as Kyber, Dilithium, and HQC. By integrating these algorithms directly into real-time transport and authentication flows for Web (HTTP/3) and VoIP services, QUAS moves beyond theoretical testing to deliver practical, deployment-ready security. 
+                                    Closely aligned with the PQ-REACT vision for cryptographic agility, the solution employs hybrid flows to ensure backward compatibility, enabling the early adoption of robust defense mechanisms across critical digital infrastructure.
+                                </p>
+                                <p class="project-description" style="margin-top: 10px;">
+                                    <strong>Period:</strong> 2025 - 2026<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- PROGETTO 3 - SHASAI -->
+                    <div class="col-lg-6 d-flex">
+                        <div class="project-card">
+                            <div class="project-icon-wrapper">
+                                <a href="https://cordis.europa.eu/project/id/101225866" target="_blank" rel="noopener noreferrer" title="Visita il sito web del progetto [Nome]">
+                                    <img src="../assets/images/progetti/shasai_logo.jpeg" 
+                                         alt="Logo Progetto [Nome]" 
+                                         class="project-icon"
+                                         style="cursor: pointer;">
+                                </a>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags-wrapper">
+                                    <span class="project-tag">Horizon Europe</span>
+                                    <span class="project-tag">ID: 101225866</span>
+                                    <span class="project-status ongoing">
+                                        <i class="fas fa-circle project-status-icon"></i>
+                                        Ongoing
+                                    </span>
+                                </div>
+                                <h3 class="project-title">
+                                    <a href="https://cordis.europa.eu/project/id/101225866" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                                        SHASAI
+                                    </a>
+                                </h3>
+                                <p class="project-description">
+                                     <a href="https://cordis.europa.eu/project/id/101225866" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; font-weight: 700;">SHASAI</a> (Secure Hardware and Software for AI systems) targets the critical intersection of hardware/software security and high-risk AI systems, aiming to enhance their resilience, automated testing, and continuous assessment. Adopting a comprehensive lifecycle approach, the project delivers advanced risk assessment methodologies, secure design patterns, and tools to safeguard the supply chain against dependency vulnerabilities, poisoned data, and model backdoors. Furthermore, SHASAI provides a virtual testing platform for automated defense strategies and AI-driven monitoring services to ensure integrity during operation. 
+                                     Validated through real-world scenarios in the agrifood, healthcare, and automotive sectors, the project ensures strict alignment with key regulations such as the EU AI Act and the Cyber Resilience Act, fostering the development of trustworthy AI ecosystems.
+                                <p class="project-description" style="margin-top: 10px;">
+                                    <strong>Period:</strong> 2025 - 2029<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PROGETTO 4 - FOODITY -->
+                    <div class="col-lg-6 d-flex">
+                        <div class="project-card">
+                            <div class="project-icon-wrapper">
+                                <a href="https://www.foodity-project.eu/" target="_blank" rel="noopener noreferrer" title="Visita il sito web del progetto Foodity">
+                                    <img src="../assets/images/progetti/Foodity.png" alt="Logo Progetto Foodity"
+                                        class="project-icon" style="cursor: pointer;">
+                                </a>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags-wrapper">
+                                    <span class="project-tag">Horizon Europe</span>
+                                    <span class="project-tag">ID: 101086105</span>
+                                    <span class="project-status completed">
+                                        <i class="fas fa-circle project-status-icon"></i>
+                                        Completed
+                                    </span>
+                                </div>
+                                <h3 class="project-title">
+                                    <a href="https://www.foodity-project.eu/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                                        REDUCE
+                                    </a>
+                                </h3>
+                                <p class="project-description">
+                                    <a href="https://www.foodity-project.eu/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; font-weight: 700;">REDUCE</a> (Reduction through Engagement and Data Utilization for Controlling Excess) represents a strategic fusion of active user engagement and state-of-the-art AI designed to tackle the critical issue of plate waste in canteen environments. 
+                                    By aggregating multi-dimensional data, ranging from waste volumes and environmental metrics (such as temperature and humidity) to consumer behavioral patterns, the solution establishes a comprehensive foundation for machine learning. Advanced AI algorithms leverage this dataset to forecast waste generation under varying conditions. These predictive insights translate into actionable intelligence for catering operators, enabling dynamic adjustments to menus, portion sizing, and service delivery. Ultimately, REDUCE empowers organizations to transition from reactive measures to proactive waste management, significantly enhancing sustainability and operational efficiency.
+                                </p>
+                                <p class="project-description" style="margin-top: 10px;">
+                                    <strong>Period:</strong> 2025<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- TEMPLATE TO ADD NEW PROJECTS -->
+                    <!-- Copia e incolla questo blocco per aggiungere nuovi progetti -->
+                    <!--
+                    <div class="col-lg-6 d-flex">
+                        <div class="project-card">
+                            <div class="project-icon-wrapper">
+                                <a href="https://www.sito-progetto.eu/" target="_blank" rel="noopener noreferrer" title="Visita il sito web del progetto [Nome]">
+                                    <img src="../assets/images/progetti/NOME-PROGETTO.png" 
+                                         alt="Logo Progetto [Nome]" 
+                                         class="project-icon"
+                                         style="cursor: pointer;">
+                                </a>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-tags-wrapper">
+                                    <span class="project-tag">Programma UE (es. Horizon Europe, Erasmus+, LIFE)</span>
+                                    SCEGLI UNO DEI DUE STATI:
+                                    <span class="project-status ongoing">
+                                        <i class="fas fa-circle project-status-icon"></i>
+                                        In corso
+                                    </span>
+                                    OPPURE:
+                                    <span class="project-status completed">
+                                        <i class="fas fa-check-circle project-status-icon"></i>
+                                        Concluso
+                                    </span>
+                                </div>
+                                <h3 class="project-title">
+                                    <a href="https://www.sito-progetto.eu/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">
+                                        Nome del Progetto
+                                    </a>
+                                </h3>
+                                <p class="project-description">
+                                    Descrizione dettagliata del progetto, obiettivi principali, 
+                                    ambito di applicazione e risultati attesi o raggiunti.
+                                </p>
+                                <p class="project-description" style="margin-top: 10px;">
+                                    <strong>Periodo:</strong> YYYY - YYYY<br>
+                                    <strong>Programma:</strong> Nome completo del programma<br>
+                                    <strong>Ruolo Spritz Matter:</strong> Descrizione del ruolo
+                                </p>
+                                <div class="project-partners">
+                                    <h5>Partner del Progetto</h5>
+                                    <div class="partner-logos">
+                                        <img src="../assets/images/partners/partner-1.png" alt="Nome Partner 1" title="Nome Partner 1">
+                                        <img src="../assets/images/partners/partner-2.png" alt="Nome Partner 2" title="Nome Partner 2">
+                                        <img src="../assets/images/partners/partner-3.png" alt="Nome Partner 3" title="Nome Partner 3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    -->
+
+                </div>
+                <!-- Progetti Grid End -->
+
+            </div>
+        </div>
+        <!-- Projects Section End -->
+
+
+        <!-- Footer Section Start -->
+        <div class="section footer-section footer-section-03 footer-section-05">
+            <!-- style="background-image: url(../assets/images/bg/footer-bg.jpg);"> -->
+
+            <div class="container">
+            <!-- Footer Widget Wrap Start -->
+            <div class="footer-widget-wrap">
+                <div class="row flex-col">
+                    <div class="col-lg-3 col-sm-6 foot-logo" style="width: 30%;">
+                        <!-- Footer Widget Start -->
+                        <div class="footer-widget-about">
+                            <a class="footer-logo" href="index.html"><img src="../assets/images/universita-degli-studi-di-padova-logo-vector-white-spin-off-vertical.svg" height="290px"
+                                    alt="Logo"></a>
+                            
+                            
+                        </div>
+                        <!-- Footer Widget End -->
+                    </div>
+                    <div class="col-lg-3 col-sm-6 foot-logo " style="width: 15%; margin-top: 2.5em;">
+                        <!-- Footer Widget Start -->
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title">Useful Links</h4>
+
+                            <div class="widget-link">
+                                <ul class="link">
+                                    <li><a href="team.html">Team</a></li>
+                                    <li><a href="privacy.html">Privacy Policy</a></li>
+                                    <!-- <li><a href="#">Blog</a></li> -->
+                                    <!-- <li><a href="#">Payment Gatway</a></li>
+                            <li><a href="#">Policy</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Footer Widget End -->
+                    </div>
+                    <div class="col-lg-3 col-sm-6 foot-logo" style="width: 15%; margin-top: 2.5em;">
+                        <!-- Footer Widget Start -->
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title">I Nostri Servizi</h4>
+
+                            <div class="widget-link">
+                                <ul class="link">
+                                    <li><a href="./cybersecurity.html">Cyber Security</a></li>
+                                    <li><a href="./ai.html">AI</a></li>
+                                    <li><a href="./workshop.html">Workshop</a></li>
+                                    <!-- <li><a href="#">Outsourcing</a></li>
+                            <li><a href="#">Networking</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Footer Widget End -->
+                    </div>
+                    <div class="col-lg-3 col-sm-6 foot-logo" style="width: 20%; margin-top: 2.5em;">
+                        <!-- Footer Widget Start -->
+                        <div class="footer-widget">
+                            
+                            <a href="contact.html">
+                                <h4 class="footer-widget-title">Contact Information</h4>
+                            </a>
+                            <div class="widget-info">
+                                <ul>
+                                    <!-- <li>
+                                <div class="info-icon">
+                                    <i class="flaticon-phone-call"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span><a href="#">+91 458 654 528</a></span>
+                                </div>
+                            </li> -->
+                                    <li>
+                                        <div class="info-icon">
+                                            <i class="far fa-envelope-open"></i>
+                                        </div>
+                                        <div class="info-text">
+                                            <span><a
+                                                    href="mailto:info@spritzmatter.com">info@spritzmatter.com</a></span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info-icon">
+                                            <i class="flaticon-pin"></i>
+                                        </div>
+                                        <div class="info-text">
+                                            <span>Via Carlo Rezzonico 6, Padova, 35131, Italy (Sede operativa)</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info-icon">
+                                            <i class="flaticon-pin"></i>
+                                        </div>
+                                        <div class="info-text">
+                                            <span>Via Ugo Foscolo 3, Padova, 35131, Italy (Sede legale) </span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info-icon">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </div>
+                                        <div class="info-text">
+                                            <span>
+                                                <a href="https://www.linkedin.com/company/spritz-matter-srl/">LinkedIn</a>
+                                            </span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Footer Widget End -->
+                    </div>
+                    <div class="col-lg-3 col-sm-6 foot-logo" style="width: 20%; margin-top: 2.5em;  ">
+                        <!-- Footer Widget Start -->
+                        <div class="footer-widget">
+                            <h4 class="footer-widget-title">Legal Information</h4>
+
+                            <div class="widget-info">
+                                <ul>
+                                    <!-- <li>
+                                <div class="info-icon">
+                                    <i class="flaticon-phone-call"></i>
+                                </div>
+                                <div class="info-text">
+                                    <span><a href="#">+91 458 654 528</a></span>
+                                </div>
+                            </li> -->
+
+                                    <li>
+                                        <div class="info-icon" style="margin-right: 2px;"">
+                                <i class=" far fa-address-card"></i>
+                                        </div>
+                                        <div class="info-text">
+                                            <span>Partita IVA/cod. fisc IT05489950286</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info-icon">
+                                            <i class="far fa-money-bill-alt"></i>
+                                        </div>
+                                        <div class="info-text">
+                                            <span>Cap. Soc. € 10.000,00 i.v.</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="info-icon" style="margin-right: 7px;">
+                                            <i class="far fa-address-book"></i>
+                                        </div>
+                                        <div class="info-text">
+                                            <span>R.E.A. PD - n. 470992</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Footer Widget End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Widget Wrap End -->
+        </div>
+
+            <!-- Footer Copyright Start -->
+            <div class="footer-copyright-area">
+                <div class="container">
+                    <div class="footer-copyright-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <!-- Footer Copyright Text Start -->
+                                <div class="copyright-text text-center">
+                                    <p></p>
+                                </div>
+                                <!-- Footer Copyright Text End -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Copyright End -->
+        </div>
+        <!-- Footer Section End -->
+
+        <!-- back to top start -->
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+        <!-- back to top end -->
+
+    </div>
+
+    <!-- JS
+    ============================================ -->
+    <script src="../assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/vendor/modernizr-3.11.2.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="../assets/js/plugins/popper.min.js"></script>
+    <script src="../assets/js/plugins/bootstrap.min.js"></script>
+
+    <!-- Plugins JS -->
+    <script src="../assets/js/plugins/swiper-bundle.min.js"></script>
+    <script src="../assets/js/plugins/aos.js"></script>
+    <script src="../assets/js/plugins/waypoints.min.js"></script>
+    <script src="../assets/js/plugins/back-to-top.js"></script>
+    <script src="../assets/js/plugins/jquery.counterup.min.js"></script>
+    <script src="../assets/js/plugins/appear.min.js"></script>
+    <script src="../assets/js/plugins/jquery.magnific-popup.min.js"></script>
+
+
+    <!--====== Use the minified version files listed below for better performance and remove the files listed above ======-->
+
+
+    <!-- Main JS -->
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
